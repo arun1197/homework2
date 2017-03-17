@@ -11,6 +11,7 @@
     </el-table>
   </div> -->
   <div class="post">
+    <p># {{ post.id }}</p>
     <span>Title: {{ post.name }}</span>
     <p>Content: {{ post.content }}</p>
   </div>
