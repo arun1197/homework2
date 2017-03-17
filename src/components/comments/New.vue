@@ -2,10 +2,11 @@
   <div class="new-post">
     <el-form label-width="120px">
       <el-form-item label="Add Comment">
-        <el-input v-model="comment.content" placeholder=""></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click.native="createPost">Save</el-button>
+        <el-input placeholder="" v-model="comment.content"></el-input>
+        <br></br>
+        <div class="subtn">
+          <el-button type="primary" @click.native="createComment">Save</el-button>
+        </div>
       </el-form-item>
     </el-form>
   </div>
@@ -50,5 +51,8 @@ export default {
 <style scoped>
 .md-list-item {
   padding-left: 40px;
+}
+.subtn {
+  padding right: 80px;
 }
 </style>
