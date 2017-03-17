@@ -5,16 +5,25 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import App from './App.vue'
 import router from './router'
-
-Vue.config.productionTip = false
-
+import store from './store'
+import Axios from 'axios'
 
 Vue.use(ElementUI)
+Vue.$http = Axios
+Axios.defaults.baseURL = 'https://iccs340-vue-api-auth.herokuapp.com/'
+Axios.defaults.headers.common.Accept = 'application/json'
+Axios.defaults.withCredentials = true
+Vue.config.productionTip = false
+
+import UserApi from '@/api/users.js'
+
+UserApi.checkLoggedIn()
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  render: h => h(App),
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

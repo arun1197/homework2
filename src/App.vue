@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div v-if="$store.getters.loggedIn">
+    <iccs340-left-sidenav></iccs340-left-sidenav>
+    </div>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Iccs340LeftSidenav: require('./LeftSidenav')
+  }
 }
 </script>
 
@@ -18,6 +23,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>
