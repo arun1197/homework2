@@ -1,19 +1,13 @@
 <template>
-  <!-- <div class="post">
-    <el-table stripe style="width: 100%">
-      <el-table-column label="Name" width="180">
-        <span>{{ post.name }}</span>
-        <p>{{ post.content }}</p>
-      </el-table-column>
-      <el-table-column label="Address">
-        <el-button type="primary" icon="plus">code</el-button>
-      </el-table-column>
-    </el-table>
-  </div> -->
-  <div class="post">
-    <p># {{ post.id }}</p>
-    <span>Title: {{ post.name }}</span>
-    <p>Content: {{ post.content }}</p>
+  <div class="posts">
+    <h1>Add Comment</h1>
+      <div class="text item">
+        <el-card class="box-card">
+          <p># {{ post.id }}</p>
+          <span>Title: {{ post.name }}</span>
+          <p>Content: {{ post.content }}</p>
+        </el-card>
+      </div>
   </div>
 
 </template>
@@ -34,5 +28,13 @@ export default {
 </script>
 
 <style scoped>
+.text {
+  font-size: 14px;
+}
+
+.item {
+  padding: 18px 0;
+  padding-right: 50px;
+}
 
 </style>
