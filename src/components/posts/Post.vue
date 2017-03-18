@@ -1,6 +1,5 @@
 <template>
   <div class="posts">
-    <h1>Add Comment</h1>
       <div class="text item">
         <el-card class="box-card">
           <p># {{ post.id }}</p>
@@ -9,7 +8,6 @@
         </el-card>
       </div>
   </div>
-
 </template>
 
 
