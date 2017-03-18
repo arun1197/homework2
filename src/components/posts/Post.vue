@@ -14,7 +14,7 @@
 <script>
 
 export default {
-  name: 'post',
+  name: 'posts',
   props: {
     post: {
       type: Object,
