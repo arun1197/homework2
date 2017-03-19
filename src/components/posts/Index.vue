@@ -3,7 +3,7 @@
     <h1>View post</h1>
     <el-card class="box-card">
       <div v-for="post in posts" :key="post.id" class="text item">
-        <el-card class="box-card">
+        <el-card class="inner-card">
           <router-link :to="{ name: 'Posts.show', params: {id: post.id } }">
             <iccs340-post :post='post'></iccs340-post>
           </router-link>
@@ -51,6 +51,13 @@ export default {
 
   .item {
     padding: 18px 0;
+  }
+
+  .inner-card{
+    background-color: #4186f4;
+  }
+  .box-card{
+    background-color: #004d99;
   }
 
 </style>

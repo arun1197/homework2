@@ -35,4 +35,8 @@ export default {
   padding-right: 50px;
 }
 
+.box-card{
+  background-color: #ffff00;
+}
+
 </style>
